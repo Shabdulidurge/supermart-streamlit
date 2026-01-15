@@ -6,7 +6,11 @@ import numpy as np
 # ============================
 # Load SuperMart Data
 # ============================
+import os
+st.write("Files:", os.listdir())
+
 df = pd.read_csv("SampleSuperStore_clean.csv")
+st.write("CSV loaded", df.shape)
 
 # Clean data
 df = df.replace([np.inf, -np.inf], np.nan).dropna()
@@ -156,4 +160,5 @@ explain = pd.DataFrame({
 })
 
 st.dataframe(explain, use_container_width=True)
+
 
