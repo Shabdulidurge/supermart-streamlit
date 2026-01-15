@@ -1,4 +1,5 @@
 import streamlit as st
+st.write("App is running")
 import pandas as pd
 import numpy as np
 
@@ -155,3 +156,4 @@ explain = pd.DataFrame({
 })
 
 st.dataframe(explain, use_container_width=True)
+
